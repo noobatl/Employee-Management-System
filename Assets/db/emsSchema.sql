@@ -13,7 +13,7 @@ CREATE TABLE department(
   --   * **id** - INT PRIMARY KEY
   id INT NOT NULL AUTO_INCREMENT,
   --   * **name** - VARCHAR(30) to hold department name
-  name VARCHAR(30),
+  dept_name VARCHAR(30),
   PRIMARY KEY (id)
 );
 
