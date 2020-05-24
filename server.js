@@ -1,5 +1,6 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
+const logo = require("asciiart-logo");
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -8,6 +9,20 @@ const connection = mysql.createConnection({
   password: "yourRootPassword",
   database: "employeeDB",
 });
+
+console.log(
+    logo({
+        name: "Employee Manager",
+        lineChars: 10,
+        padding: 2, 
+        margin: 3, 
+        borderColor: "white",
+        logoColor: "white",
+        textColor: "white"
+    })
+    .emptyLine()
+    .render()
+);
 
 connection.connect(function (err) {
   if (err) {
@@ -274,4 +289,3 @@ function updateRoles() {
     })
   });
 }
-    
